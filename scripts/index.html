@@ -2,6 +2,8 @@
 <head>
     <title>Rock-Paper-Scissors</title>
     <script>
+        let userScore=0
+        let compScore=0
         const choice=[
             "Rock",
             "Paper",
@@ -11,24 +13,32 @@
             let random=choice[Math.floor(Math.random()*choice.length)];
             return random; 
         }
-        var comChoice=computerPlay();
+        var compChoice=computerPlay();
         var userChoice=window.prompt("CHOOSE WISELY", "Rock, Paper or Scissors?");
-        if ( userChoice.toLowerCase()=="rock" && comChoice.toLowerCase()=="scissors") {
-            alert("YOU WIN! :D")
-        } else if( userChoice.toLowerCase()=="paper" && comChoice.toLowerCase()=="rock"){
-            alert("YOU WIN! :D")
-        } else if( userChoice.toLowerCase()=="scissors" && comChoice.toLowerCase()=="paper"){
-            alert("YOU WIN! :D")
-        } else if( userChoice.toLowerCase()=="rock" && comChoice.toLowerCase()=="paper"){
-            alert("YOU LOSE! :(")
-        } else if( userChoice.toLowerCase()=="scissors" && comChoice.toLowerCase()=="rock"){
-            alert("YOU LOSE! :(")
-        } else if( userChoice.toLowerCase()=="paper" && comChoice.toLowerCase()=="scissors"){
-            alert("YOU LOSE! :(")
-        } else if( userChoice.toLowerCase()==comChoice.toLowerCase()){
-            alert("TIE!")
-        } else {
-            alert("INVALID CHOICE")
-        }
+            if (userChoice.toLowerCase()=="rock" && compChoice.toLowerCase()=="scissors"){
+                    alert("Congratulations, you won! Rock beats scissors.")
+                    userScore++;
+                } else if (compChoice.toLowerCase()=="paper"){
+                    alert("Computer wins, better luck next time... Paper beats rock.")
+                    compScore++;
+                } else if(compChoice.toLowerCase()===userChoice.toLowerCase()){
+                    alert("It's a Tie!")
+                } else if (userChoice.toLowerCase()=="paper" && compChoice.toLowerCase()=="rock"){
+                    alert("Congratulations, you won! Paper beats rock.")
+                    userScore++;
+                } else if (compChoice.toLowerCase()=="scissors"){
+                    alert("Computer wins, better luck next time... Scissors beat paper.")
+                    compScore++;
+                } else if(compChoice.toLowerCase()===userChoice.toLowerCase()){
+                    alert("It's a Tie!")
+                } else if (userChoice.toLowerCase()=="scissors" && compChoice.toLowerCase()=="paper"){
+                    alert("Congratulations, you won! Scissors beat paper.")
+                    userScore++;
+                } else if (compChoice.toLowerCase()=="rock"){
+                    alert("Computer wins, better luck next time... Rock beats scissors.")
+                    compScore++;
+                } else if(compChoice.toLowerCase()===userChoice.toLowerCase()){
+                    alert("It's a Tie!")
+                }
     </script>
 </head>
