@@ -1,44 +1,5 @@
 <!DOCTYPE html>
 <head>
-    <title>Rock-Paper-Scissors</title>
-    <script>
-        let userScore=0
-        let compScore=0
-        const choice=[
-            "Rock",
-            "Paper",
-            "Scissors"
-        ]
-        function computerPlay() {
-            let random=choice[Math.floor(Math.random()*choice.length)];
-            return random; 
-        }
-        var compChoice=computerPlay();
-        var userChoice=window.prompt("CHOOSE WISELY", "Rock, Paper or Scissors?");
-            if (userChoice.toLowerCase()=="rock" && compChoice.toLowerCase()=="scissors"){
-                    alert("Congratulations, you won! Rock beats scissors.")
-                    userScore++;
-                } else if (compChoice.toLowerCase()=="paper"){
-                    alert("Computer wins, better luck next time... Paper beats rock.")
-                    compScore++;
-                } else if(compChoice.toLowerCase()===userChoice.toLowerCase()){
-                    alert("It's a Tie!")
-                } else if (userChoice.toLowerCase()=="paper" && compChoice.toLowerCase()=="rock"){
-                    alert("Congratulations, you won! Paper beats rock.")
-                    userScore++;
-                } else if (compChoice.toLowerCase()=="scissors"){
-                    alert("Computer wins, better luck next time... Scissors beat paper.")
-                    compScore++;
-                } else if(compChoice.toLowerCase()===userChoice.toLowerCase()){
-                    alert("It's a Tie!")
-                } else if (userChoice.toLowerCase()=="scissors" && compChoice.toLowerCase()=="paper"){
-                    alert("Congratulations, you won! Scissors beat paper.")
-                    userScore++;
-                } else if (compChoice.toLowerCase()=="rock"){
-                    alert("Computer wins, better luck next time... Rock beats scissors.")
-                    compScore++;
-                } else if(compChoice.toLowerCase()===userChoice.toLowerCase()){
-                    alert("It's a Tie!")
-                }
-    </script>
+  <title>Rock-Paper-Scissors</title>
+  <script src="rps.js"></script>
 </head>
