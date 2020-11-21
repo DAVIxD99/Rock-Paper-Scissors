@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Rock-Paper-Scissors</title>
+    <script>
+        const choice=[
+            "Rock",
+            "Paper",
+            "Scissors"
+        ]
+        function computerPlay() {
+            let random=choice[Math.floor(Math.random()*choice.length)];
+            return random; 
+        }
+        var comChoice=computerPlay();
+        var userChoice=window.prompt("CHOOSE WISELY", "Rock, Paper or Scissors?");
+        if ( userChoice.toLowerCase()=="rock" && comChoice.toLowerCase()=="scissors") {
+            alert("YOU WIN! :D")
+        } else if( userChoice.toLowerCase()=="paper" && comChoice.toLowerCase()=="rock"){
+            alert("YOU WIN! :D")
+        } else if( userChoice.toLowerCase()=="scissors" && comChoice.toLowerCase()=="paper"){
+            alert("YOU WIN! :D")
+        } else if( userChoice.toLowerCase()=="rock" && comChoice.toLowerCase()=="paper"){
+            alert("YOU LOSE! :(")
+        } else if( userChoice.toLowerCase()=="scissors" && comChoice.toLowerCase()=="rock"){
+            alert("YOU LOSE! :(")
+        } else if( userChoice.toLowerCase()=="paper" && comChoice.toLowerCase()=="scissors"){
+            alert("YOU LOSE! :(")
+        } else if( userChoice.toLowerCase()==comChoice.toLowerCase()){
+            alert("TIE!")
+        } else {
+            alert("INVALID CHOICE")
+        }
+    </script>
+</head>
